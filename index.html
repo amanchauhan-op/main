@@ -1,18 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Google Trends Embed Test</title>
-</head>
-<body>
-  <h2>Trending in India</h2>
-
-  <iframe 
-    width="600" 
-    height="400" 
-    src="https://trends.google.com/trends/embed/explore/TIMESERIES?geo=IN&q=Cricket"
-    frameborder="0" 
-    scrolling="0">
-  </iframe>
-</body>
+  <head>
+    <title>Trending in India</title>
+  </head>
+  <body>
+    <h1>Trending in India</h1>
+    <!-- Embed official Google Trends widget -->
+    <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2431_RC01/embed_loader.js"></script>
+    <script type="text/javascript">
+      trends.embed.renderWidget("dailytrends", "", {"geo":"IN","guestPath":"https://trends.google.com:443/trends/embed/"});
+    </script>
+  </body>
 </html>
