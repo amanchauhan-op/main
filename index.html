@@ -3,40 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Page Test</title>
+  <title>Trending in India</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      background-color: #f8f8f8;
       text-align: center;
-      padding: 50px;
+      padding: 40px;
     }
     h1 {
-      color: #2c3e50;
+      color: #1a73e8;
     }
-    p {
-      color: #555;
-      font-size: 18px;
-    }
-    .box {
-      background: white;
-      display: inline-block;
-      padding: 20px 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    #trends-widget {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>✅ GitHub Pages Test</h1>
-    <p>If you can see this message, your GitHub Page is working!</p>
-    <p><small>Last updated: <span id="time"></span></small></p>
-  </div>
+  <h1>🔥 Trending in India</h1>
+  <div id="trends-widget"></div>
 
-  <script>
-    // Show current date and time
-    document.getElementById("time").innerText = new Date().toLocaleString();
+  <!-- Official Google Trends Embed -->
+  <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2431_RC01/embed_loader.js"></script>
+  <script type="text/javascript">
+    trends.embed.renderWidget("dailytrends", "", {
+      geo: "IN",
+      guestPath: "https://trends.google.com:443/trends/embed/"
+    });
   </script>
 </body>
 </html>
